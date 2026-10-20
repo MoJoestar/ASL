@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shared · SignBridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="top">
+    <h1>💬 Shared conversation</h1>
+    <span class="code" id="code"></span>
+  </div>
+  <div style="height:calc(100vh - 56px)">
+    <div class="chat" id="chat" style="height:100%"></div>
+  </div>
+  <div class="over" id="over">Chat ended</div>
+  <script src="app.js"></script>
+  <script>
+    const box = document.getElementById('chat');
+    A.onMsg = () => A.render(box);
+    A.join('shared');
+    A.render(box);
+  </script>
+</body>
+</html>

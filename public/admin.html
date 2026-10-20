@@ -1,0 +1,12 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Admin · SignBridge</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="top"><h1>🔐 Admin</h1><div class="row"><span class="mut" id="who"></span><button class="ghost" onclick="location.href='index.html'">Home</button></div></div>
+<div class="wrap" id="login"><div class="card"><h2>Admin login</h2><div class="row"><input id="u" placeholder="Username" style="width:180px"><input id="p" type="password" placeholder="Password" style="width:180px"><button id="go">Log in</button></div><p class="mut" id="err"></p></div></div>
+<div class="grid" id="app" style="display:none"><div class="col" style="overflow:auto">
+<div class="cam"><video id="v" autoplay muted playsinline></video><canvas id="c"></canvas><div class="dot" id="status">Starting camera…</div></div>
+<div class="card"><div class="row"><label><input type="radio" name="m" value="rec" checked style="width:auto"> Record clips</label><label><input type="radio" name="m" value="test" style="width:auto"> Test mode</label></div>
+<p class="mut" id="help">Pick a sign on the right, then sign it in front of the camera. Each time you finish (hand rests or leaves) one clip is saved. Aim for 30+ varied clips.</p>
+<div id="res" style="font-size:20px"></div></div></div>
+<div class="col" style="overflow:auto"><div class="card"><h2>Add a sign</h2><div class="row"><input id="nm" class="grow" placeholder="Sign name, e.g. hello"><select id="tp"><option>word</option><option>letter</option><option>number</option><option>command</option></select><button id="add">Add</button></div></div>
+<div class="card"><h2>Signs <span class="mut" id="tot"></span></h2><div id="list"></div></div>
+<div class="card"><h2>Backup</h2><div class="row"><button class="ghost" id="exp">⬇ Export</button><button class="ghost" id="imp">⬆ Import</button><input type="file" id="file" accept=".json" style="display:none"></div><p class="mut" id="msg"></p></div></div></div>
+<script type="module" src="admin.js"></script></body></html>

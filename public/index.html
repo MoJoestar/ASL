@@ -1,0 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SignBridge</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="top"><h1>🤟 SignBridge</h1><div class="row"><span class="code" id="code" style="display:none"></span><button class="ghost" id="adminBtn" onclick="location.href='admin.html'">Admin</button></div></div>
+<div class="wrap">
+<div class="card" id="start"><h2>Start a conversation</h2><p class="mut">Opens three linked windows: Customer, Employee and Shared transcript.</p>
+<div class="row"><button class="big" id="create">➕ Create chat</button>
+<input id="joinCode" placeholder="Chat code" maxlength="6" style="width:140px;text-transform:uppercase"><button class="ghost" id="join">Join with code</button></div>
+<p class="mut" id="blocked" style="display:none">⚠️ Pop-ups were blocked. Allow pop-ups for this site, or open each window below.</p></div>
+<div class="card" id="active" style="display:none"><h2>Chat <span id="ac" class="code"></span> is active</h2>
+<div class="row"><button class="ghost" data-open="customer">🧏 Customer</button><button class="ghost" data-open="employee">🧑‍💼 Employee</button><button class="ghost" data-open="shared">💬 Shared</button><span class="grow"></span><button class="bad" id="end">⏹ End chat (closes all windows)</button></div></div>
+<div class="card"><h2>Setup check</h2><div class="row"><button class="ghost" id="tcam">📷 Test camera</button><button class="ghost" id="tmic">🎤 Test microphone</button></div><p id="chk" class="mut"></p></div>
+<div class="card"><h2>Recent chats</h2><div id="recent" class="chips"></div></div></div>
+<script src="app.js"></script><script src="index.js"></script></body></html>

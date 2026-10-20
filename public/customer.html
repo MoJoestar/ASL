@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Customer · SignBridge</title><link rel="stylesheet" href="style.css"></head><body>
+<div class="top"><h1>🧏 Customer</h1><span class="code" id="code"></span></div>
+<div class="grid"><div class="col">
+<div class="cam"><video id="v" autoplay muted playsinline></video><canvas id="c"></canvas><div class="dot" id="status">Starting camera…</div><div class="ring" id="ring"></div></div>
+<div class="card"><div class="mut">Your sentence</div><div class="chips" id="toks" style="min-height:36px;margin:6px 0"></div>
+<textarea id="prev" rows="2" placeholder="Your sentence appears here. You can edit it."></textarea>
+<div class="row" style="margin-top:8px"><button class="ok big" id="ok">✅ Confirm</button><button class="ghost" id="undo">↩️ Undo</button><button class="ghost" id="clear">🗑️ Clear</button><button class="ghost" id="nope">❓ Not what I meant</button></div>
+<div class="chips" id="sug" style="margin-top:10px"></div>
+<div class="row" style="margin-top:8px"><input id="typed" class="grow" placeholder="Type a word and press Enter (if signing is not working)"><label class="mut"><input type="checkbox" id="gest" checked style="width:auto"> 👍 gesture confirm</label></div></div></div>
+<div class="col"><div class="card grow" style="padding:0;min-height:0"><div class="chat" id="chat"></div></div></div></div>
+<div class="over" id="over">Chat ended</div><script src="app.js"></script><script type="module" src="customer.js"></script><script type="module" src="recog.js"></script></body></html>
